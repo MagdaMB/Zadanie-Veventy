@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+
+  input:focus,
+  select:focus {
+    outline-color: $colorBorder;
+  }
+
+  button:focus {
+    outline-color: transparent;
+  }
+}
+
+$main-color: #3a3335;
+$second-color: #908e8e;
+$defaultBorderRadius: 8px;
+$bgInput: #f7f7f7;
+$colorInputChecked: #c6d8d3;
+$colorBorder: #ede8e9;
+$bgNextBtn: #eb5e55;
+$colorLine: #eef3f2;
+.container {
+  margin: 17px auto;
+  max-width: 1140px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    max-width: 655px;
+    h3 {
+      color: $main-color;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.09px;
+      line-height: 36px;
+    }
+
+    p {
+      color: $second-color;
+      display: block;
+      font-size: 14px;
+      line-height: 21px;
+      margin-top: 25px;
+      text-align: left;
+    }
+
+    .extra-charge {
+      border: 1px solid;
+      border-color: $colorBorder;
+      border-radius: $defaultBorderRadius;
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+      max-width: 655px;
+      padding: 25px 10px;
+      width: 100%;
+      label,
+      span {
+        color: $main-color;
+        font-weight: bold;
+      }
+      label {
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 21px;
+        padding-left: 20px;
+      }
+
+      input {
+        display: none;
+      }
+
+      input + label:before {
+        background-color: $bgInput;
+        border: none;
+        border-radius: 50%;
+        box-sizing: border-box;
+        content: "";
+        cursor: pointer;
+        display: inline-block;
+        height: 20px;
+        left: -10px;
+        position: relative;
+        top: 5px;
+        transition: all 200ms ease;
+        width: 20px;
+      }
+
+      input:checked + label:before {
+        content: "";
+        border: 6px solid;
+        border-color: $colorInputChecked;
+      }
+      span.price {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    .payment {
+      .payment-block {
+        display: flex;
+        flex-direction: column;
+
+        .creditCard-img {
+          position: relative;
+          left: 20px;
+          max-width: 39px;
+          top: 50px;
+        }
+
+        label.select {
+          position: relative;
+          &:before {
+            content: ">";
+            color: $main-color;
+            display: block;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 25px;
+            position: absolute;
+            right: 30px;
+            transform: rotate(90deg);
+            top: 20px;
+          }
+          select {
+            appearance: none;
+            background: transparent;
+            border: 1px solid;
+            border-color: $colorBorder;
+            border-radius: $defaultBorderRadius;
+            cursor: pointer;
+            display: block;
+            height: 65px;
+            padding: 10px 70px;
+            width: 655px;
+          }
+        }
+
+        .payment-form {
+          display: flex;
+          flex-wrap: wrap;
+          width: 655px;
+
+          input {
+            border: 1px solid;
+            border-color: $colorBorder;
+            border-radius: $defaultBorderRadius;
+            padding: 20px;
+          }
+
+          .form-partOne {
+            margin: 10px 0;
+            input.card-number {
+              color: #3a3335;
+              font-size: 14px;
+              font-weight: bold;
+              line-height: 21px;
+              width: 655px;
+            }
+          }
+
+          .form-partTwo {
+            display: flex;
+            max-width: 655px;
+            input {
+              color: #908e8e;
+              font-size: 14px;
+              font-weight: bold;
+              line-height: 21px;
+              width: 323px;
+            }
+            input:first-child {
+              margin: 0 8px 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 90px auto 30px;
+
+    button {
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      height: 46px;
+      line-height: 21px;
+      text-align: center;
+      width: 98px;
+    }
+    .backBtn {
+      background: $bgInput;
+      color: #908e8e;
+    }
+
+    .middle-block {
+      width: 438px;
+      height: 52px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      label {
+        color: #908e8e;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 21px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 52px;
+        justify-content: space-between;
+        width: 67px;
+      }
+
+      input {
+        display: none;
+      }
+
+      input + label:before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: $bgInput;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+        border: 6px solid;
+        border-color: $colorInputChecked;
+      }
+
+      input[id="confirm"] + label:before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: $colorInputChecked;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+        border: 6px solid;
+        border-color: $colorLine;
+      }
+      .line {
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 142px;
+          height: 2px;
+          background: $colorLine;
+          position: relative;
+          bottom: 20px;
+        }
+      }
+    }
+    .nextBtn {
+      background: $bgNextBtn;
+      color: #ffffff;
+    }
+  }
+}

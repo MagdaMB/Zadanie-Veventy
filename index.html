@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Veventy_zadanie</title>
+  <link type="text/css" rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="/img/Icon.png" alt="logo" />
+      <img src="/img/Img.png" alt="logo" />
+    </header>
+    <div class="main">
+      <h3>Select additional services</h3>
+      <div>
+        <p>
+          Services
+        </p>
+        <div>
+          <div class="extra-charge">
+            <div>
+              <input type="checkbox" id="message" name="extraCharges">
+              <label for="message">Message and Spa</label>
+            </div>
+            <span class="price">+$50.00</span>
+          </div>
+          <div class="extra-charge">
+            <div>
+              <input type="checkbox" id="airport" name="extraCharges">
+              <label for="airport">Airport pickup</label>
+            </div>
+            <span class="price">+$20.00</span>
+          </div>
+          <div class="extra-charge">
+            <div>
+              <input type="checkbox" id="meals" name="extraCharges">
+              <label for="meals">Breakfast</label>
+            </div>
+            <span class="price">+$20.00</span>
+          </div>
+        </div>
+
+        <div class="payment">
+          <p>Payment for booking</p>
+          <div class="payment-block">
+            <div class="creditCard-img"><img src="img/visa.png" /></div>
+            <label class="select">
+              <select name="payment">
+                <option value="crediCard">Credit or debit Visa card</option>
+              </select>
+            </label>
+            <form class="payment-form" action="">
+              <div class="form-partOne">
+                <input class="card-number" placeholder="Card Number" type="text" value="2345 2334 3456 9998 3456" />
+              </div>
+              <div class="form-partTwo">
+                <input class="card-date" value="Expiration" type="text" />
+                <input class="card-cvv" value="CVV" type="text" maxlength="3" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer">
+      <button class="backBtn">Back</button>
+      <div class="middle-block one">
+        <div>
+          <input type="radio" id="booking" name="stage" />
+          <label for="booking">Booking</label>
+        </div>
+        <span class="line"></span>
+        <div>
+          <input id="checkout" type="radio" name="stage" />
+          <label for="checkout">Checkout</label>
+        </div>
+        <span class="line"></span>
+        <div>
+          <input id="confirm" type="radio" name="stage" />
+          <label class="label-confirm" for="confirm">Confirm</label>
+        </div>
+      </div>
+      <button class="nextBtn">Next</button>
+    </div>
+  </div>
+</body>
+
+</html>
